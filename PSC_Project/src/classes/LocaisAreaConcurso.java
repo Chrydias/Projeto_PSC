@@ -1,0 +1,35 @@
+package classes;
+
+import java.util.Calendar;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "locais_concurso")
+public class LocaisAreaConcurso {
+
+	@EmbeddedId
+	private LocaisAreaConcursoPK chaveComposta;
+	
+	private Calendar data;
+
+	public LocaisAreaConcursoPK getChaveComposta() {
+		return chaveComposta;
+	}
+
+	public void setChaveComposta(LocaisAreaConcursoPK chaveComposta) {
+		this.chaveComposta = chaveComposta;
+	}
+
+	public Calendar getData() {
+		return data;
+	}
+
+	public void setData(Calendar data) {
+		this.data = data;
+	}
+	
+	
+}
