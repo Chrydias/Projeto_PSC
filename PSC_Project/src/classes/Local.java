@@ -23,9 +23,9 @@ public class Local {
 	@Embedded
 	private Endereco endereco;
 	
-	@OneToMany (mappedBy="local", fetch = FetchType.LAZY)
+	/*@OneToMany (mappedBy="local", fetch = FetchType.LAZY)
 	@Cascade (CascadeType.ALL)
-	private List<AreaConcurso> areasconcurso;
+	private List<LocaisAreaConcurso> locaisareaconcurso;*/
 
 	public int getId() {
 		return id;
@@ -51,21 +51,21 @@ public class Local {
 		this.endereco = endereco;
 	}
 
-	public List<AreaConcurso> getConcursos() {
-		return areasconcurso;
+	/*public List<LocaisAreaConcurso> getConcursos() {
+		return locaisareaconcurso;
 	}
 
-	public void setConcursos(List<AreaConcurso> areasconcurso) {
-		this.areasconcurso = areasconcurso;
+	public void setConcursos(List<LocaisAreaConcurso> locaisareaconcurso) {
+		this.locaisareaconcurso = locaisareaconcurso;
 	}
-
+*/
 	public Local(int id, boolean disponivel, Endereco endereco,
-			List<AreaConcurso> areasconcurso) {
+			List<LocaisAreaConcurso> locaisareaconcurso) {
 		super();
 		this.id = id;
 		this.disponivel = disponivel;
 		this.endereco = endereco;
-		this.areasconcurso = areasconcurso;
+		//this.locaisareaconcurso = locaisareaconcurso;
 	}
 
 	public Local() {

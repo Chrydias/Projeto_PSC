@@ -42,7 +42,7 @@ public class AreaConcurso {
 	
 	/*@OneToMany (mappedBy="areaconcurso", fetch=FetchType.LAZY)
 	@Cascade (CascadeType.ALL)
-	private List<Local> locais_AreaConcurso;*/
+	private List<LocaisAreaConcurso> locais_AreaConcurso;*/
 	
 	public AreaConcurso(long id, String nome, int vagas, Concurso concurso) {
 		super();
@@ -104,11 +104,11 @@ public class AreaConcurso {
 		this.concursando = concursando;
 	}
 
-	/*public List<Local> getLocais_AreaConcurso() {
+	/*public List<LocaisAreaConcurso> getLocais_AreaConcurso() {
 		return locais_AreaConcurso;
 	}
 
-	public void setLocais_AreaConcurso(List<Local> locais_AreaConcurso) {
+	public void setLocais_AreaConcurso(List<LocaisAreaConcurso> locais_AreaConcurso) {
 		this.locais_AreaConcurso = locais_AreaConcurso;
 	}*/
 	

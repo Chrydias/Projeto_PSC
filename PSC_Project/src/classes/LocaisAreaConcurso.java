@@ -4,17 +4,19 @@ import java.util.Calendar;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "locais_concurso")
+@Table(name = "locais_areaconcurso")
 public class LocaisAreaConcurso {
 
 	@EmbeddedId
 	private LocaisAreaConcursoPK chaveComposta;
 	
 	private Calendar data;
-
+	
 	public LocaisAreaConcursoPK getChaveComposta() {
 		return chaveComposta;
 	}
@@ -29,6 +31,17 @@ public class LocaisAreaConcurso {
 
 	public void setData(Calendar data) {
 		this.data = data;
+	}
+
+	public LocaisAreaConcurso(LocaisAreaConcursoPK chaveComposta, Calendar data) {
+		super();
+		//this.chaveComposta = chaveComposta;
+		this.data = data;
+	}
+
+	public LocaisAreaConcurso() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	
