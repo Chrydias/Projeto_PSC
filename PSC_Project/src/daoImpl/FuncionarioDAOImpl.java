@@ -15,13 +15,17 @@ public class FuncionarioDAOImpl extends GenericDAOImpl<Funcionario> implements I
 	@Override
 	public void inserir(Funcionario entidade) {
 		// TODO Auto-generated method stub
-		
+		this.getManager().getTransaction().begin();
+		this.getManager().persist(entidade);
+		this.getManager().getTransaction().commit();
 	}
 
 	@Override
 	public void atualizar(Funcionario entidade) {
 		// TODO Auto-generated method stub
-		
+		this.getManager().getTransaction().begin();
+		this.getManager().merge(entidade);
+		this.getManager().getTransaction().commit();
 	}
 
 	@Override

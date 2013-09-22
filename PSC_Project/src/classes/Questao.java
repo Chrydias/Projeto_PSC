@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Type;
 
 @Entity
 public class Questao {
@@ -20,7 +21,7 @@ public class Questao {
 	@Id	@GeneratedValue
 	@Column (name="id_questao")
 	private long id;
-
+	@Type(type="text")
 	private String texto;
 
 	private String referencia;

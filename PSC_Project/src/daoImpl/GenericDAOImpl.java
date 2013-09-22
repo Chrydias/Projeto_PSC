@@ -3,8 +3,6 @@
  */
 package daoImpl;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 
 import dao.IGenericDAO;

@@ -10,6 +10,11 @@ import javax.persistence.ManyToOne;
 @Embeddable
 public class LocaisAreaConcursoPK implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@ManyToOne (fetch=FetchType.EAGER)
 	@JoinColumn (name="id_areaconcurso")
 	private AreaConcurso areaconcurso;
